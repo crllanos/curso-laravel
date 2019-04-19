@@ -1,5 +1,8 @@
 # Arrancar el servicio
-php artisan server
+$ php artisan server
+
+# Arrancar pruebas
+$ vendor/bin/phpunit
 
 
 # ___________________________________

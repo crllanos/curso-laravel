@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Mapeo de peticiones y controladores
+ */
+
 Route::get('/', "UserController@index");
 
 Route::get('/users', "UserController@list");
