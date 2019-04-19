@@ -1,16 +1,16 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/', function()  {
+    return "Holanda que Talca?"; // ya no rendetea una vista
+});
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/users', function()  {
+    return "[the users list]";
+});
+Route::get('/users/{id}', function($id)  {
+    return "Info user $id.";
+})->where('id','[0-9]+');// para que entre solo si parametro es numerico, no si xej. es "add"
+
+Route::get('/users/add', function()  {
+    return "Adding new user...";
 });
